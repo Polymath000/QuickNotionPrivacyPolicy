@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuickNotion - Legal</title>
     <style>
-        /* Mobile-First & Light/Dark Mode CSS */
         :root {
             --bg-color: #ffffff;
-            --text-color: #37352f; /* Notion-like dark gray */
+            --text-color: #37352f;
             --primary: #000000;
             --secondary: #787774;
             --border: #ededed;
@@ -25,9 +24,8 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
             margin: 0;
-            padding: 0;
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
@@ -48,7 +46,7 @@
             display: flex;
             justify-content: center;
             gap: 1rem;
-            padding: 0.5rem 1rem;
+            padding: 0.5rem;
             border-bottom: 1px solid var(--border);
             position: sticky;
             top: 0;
@@ -64,7 +62,6 @@
             cursor: pointer;
             padding: 0.75rem 1rem;
             border-bottom: 2px solid transparent;
-            transition: all 0.2s ease;
         }
 
         button.active {
@@ -74,113 +71,103 @@
 
         main {
             max-width: 600px;
-            margin: 0 auto;
+            margin: auto;
             padding: 2rem 1.5rem 4rem;
         }
 
-        .content {
-            display: none;
-        }
+        .content { display: none; }
+        .content.active { display: block; }
 
-        .content.active {
-            display: block;
-            animation: fadeIn 0.3s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(5px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        h2 { margin-top: 0; color: var(--primary); }
-        h3 { color: var(--primary); margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.1rem; }
-        p, ul { margin-top: 0.5rem; }
+        h2 { color: var(--primary); }
+        h3 { margin-top: 1.5rem; font-size: 1.1rem; color: var(--primary); }
         ul { padding-left: 1.5rem; }
-        a { color: var(--secondary); text-decoration: underline; }
     </style>
 </head>
+
 <body>
 
-    <header>
-        <h1>QuickNotion</h1>
-        <p style="color: var(--secondary); margin-top: 0.5rem;">Legal Information</p>
-    </header>
+<header>
+    <h1>QuickNotion</h1>
+    <p style="color: var(--secondary);">Legal Information</p>
+</header>
 
-    <nav>
-        <button id="btn-privacy" class="active" onclick="switchTab('privacy')">Privacy Policy</button>
-        <button id="btn-terms" onclick="switchTab('terms')">Terms of Service</button>
-    </nav>
+<nav>
+    <button id="btn-privacy" class="active" onclick="switchTab('privacy')">Privacy Policy</button>
+    <button id="btn-terms" onclick="switchTab('terms')">Terms of Service</button>
+</nav>
 
-    <main>
-        <section id="privacy" class="content active">
-            <h2>Privacy Policy</h2>
-            
-            <h3>Introduction</h3>
-            <p>QuickNotion ("we," "us," or "the App") is committed to protecting your privacy. This Privacy Policy explains how we handle your information when you use the QuickNotion mobile application.</p>
+<main>
 
-            <h3>Data Collection & Storage</h3>
-            <ul>
-                <li><strong>No Server-Side Storage:</strong> QuickNotion does not own or operate any servers to store your personal data, notes, or Notion workspace information.</li>
-                <li><strong>Local Storage:</strong> All data—including your Notion OAuth access tokens and app preferences—is stored locally on your device.</li>
-                <li><strong>Notion Data:</strong> We do not collect, read, or store the content of your Notion databases on any external servers. The App acts solely as a bridge between your device and the Notion API.</li>
-            </ul>
+<!-- Privacy Policy -->
+<section id="privacy" class="content active">
+    <h2>Privacy Policy</h2>
 
-            <h3>Third-Party Services</h3>
-            <p>QuickNotion uses the Notion API to provide its core functionality. By using the App, you are also subject to Notion’s Privacy Policy. We use Notion OAuth to securely authenticate your account.</p>
+    <h3>Introduction</h3>
+    <p>QuickNotion ("we," "us," or "the App") is committed to protecting your privacy.</p>
 
-            <h3>Security</h3>
-            <p>We prioritize the security of your local data.</p>
+    <h3>Data Collection & Storage</h3>
+    <ul>
+        <li><strong>No Server-Side Storage:</strong> We do not store your data on external servers.</li>
+        <li><strong>Local Storage:</strong> Data is stored only on your device.</li>
+        <li><strong>Notion Data:</strong> We do not read or store your Notion content externally.</li>
+    </ul>
 
-            <h3>Contact Us</h3>
-            <p>If you have questions about this Privacy Policy, contact us at: <a href="mailto:quicknotion0@gmail.com">quicknotion0@gmail.com</a></p>
-        </section>
+    <h3>Third-Party Services</h3>
+    <p>The App uses the Notion API. You are also subject to Notion’s policies.</p>
 
-        <section id="terms" class="content">
-            <h2>Terms of Service</h2>
+    <h3>Third-Party Disclaimer</h3>
+    <p>QuickNotion is an independent application and is not affiliated with, endorsed by, or sponsored by Notion Labs, Inc. “Notion” is a trademark of Notion Labs, Inc. The App uses the Notion API only to provide functionality.</p>
 
-            <h3>1. Acceptance of Terms</h3>
-            <p>By downloading or using QuickNotion, you agree to these Terms of Service. If you do not agree, please do not use the App.</p>
+    <h3>Security</h3>
+    <p>We implement reasonable measures to protect data stored on your device. However, no system is completely secure.</p>
 
-            <h3>2. Description of Service</h3>
-            <p>QuickNotion is a tool designed to help users quickly capture and sync data to their Notion workspace. The App requires a Notion account and an active internet connection to function.</p>
+    <h3>Contact</h3>
+    <p>Email: quicknotion0@gmail.com</p>
+</section>
 
-            <h3>3. User Responsibilities</h3>
-            <ul>
-                <li><strong>Account Security:</strong> You are responsible for maintaining the security of your device and your Notion credentials.</li>
-                <li><strong>Acceptable Use:</strong> You agree not to use the App for any illegal activities.</li>
-            </ul>
+<!-- Terms -->
+<section id="terms" class="content">
+    <h2>Terms of Service</h2>
 
-            <h3>4. Intellectual Property</h3>
-            <p>The App’s code, design, and branding are the intellectual property of the developer. Your content within Notion remains your own.</p>
+    <h3>1. Acceptance</h3>
+    <p>By using the App, you agree to these terms.</p>
 
-            <h3>5. Disclaimer of Warranties</h3>
-            <p>QuickNotion is provided "as is" and "as available." We do not guarantee that the App will be bug-free or that the Notion API will always be accessible. We are not responsible for any data loss occurring within your Notion workspace.</p>
+    <h3>2. Description</h3>
+    <p>The App helps users send data to their Notion workspace.</p>
 
-            <h3>6. Limitation of Liability</h3>
-            <p>To the maximum extent permitted by law, the developer of QuickNotion shall not be liable for any indirect, incidental, or consequential damages resulting from your use or inability to use the App.</p>
-        </section>
-    </main>
+    <h3>3. User Responsibilities</h3>
+    <ul>
+        <li>You are responsible for your account security.</li>
+        <li>You must not use the App for illegal purposes.</li>
+    </ul>
 
-    <script>
-        function switchTab(tabId) {
-            // Hide all content sections
-            document.querySelectorAll('.content').forEach(section => {
-                section.classList.remove('active');
-            });
-            
-            // Remove active state from all buttons
-            document.querySelectorAll('nav button').forEach(button => {
-                button.classList.remove('active');
-            });
-            
-            // Show the selected content and highlight the button
-            document.getElementById(tabId).classList.add('active');
-            document.getElementById('btn-' + tabId).classList.add('active');
-            
-            // Smooth scroll to top of content when switching on mobile
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    </script>
+    <h3>4. Intellectual Property</h3>
+    <p>The App’s code and design belong to the developer.</p>
+
+    <h3>5. Third-Party Services and Trademarks</h3>
+    <p>This App uses the Notion API. It is not affiliated with or endorsed by Notion Labs, Inc. “Notion” is a trademark of its owner.</p>
+
+    <h3>6. Disclaimer</h3>
+    <p>The App is provided "as is" without guarantees.</p>
+
+    <h3>7. Limitation of Liability</h3>
+    <p>The developer is not responsible for damages from using the App.</p>
+
+</section>
+
+</main>
+
+<script>
+function switchTab(tabId) {
+    document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('button').forEach(el => el.classList.remove('active'));
+
+    document.getElementById(tabId).classList.add('active');
+    document.getElementById('btn-' + tabId).classList.add('active');
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
 
 </body>
 </html>
